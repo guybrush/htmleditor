@@ -322,8 +322,9 @@
 			buttonShare.textContent = 'share';
 			buttonShare.addEventListener( 'click', function ( event ) {
 
+				var prefix = window.location.origin + window.location.pathname;
 				var dom = document.createElement( 'input' );
-				dom.value = 'http://mrdoob.com/projects/htmleditor/#B/' + encode( codemirror.getValue() );
+				dom.value = prefix+'#B/' + encode( codemirror.getValue() );
 				dom.style.width = '400px';
 				dom.style.padding = '5px';
 				dom.style.marginTop = '20px';
